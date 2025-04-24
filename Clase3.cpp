@@ -21,7 +21,7 @@ int main()
             residuo = numero % 2;
             if (residuo == 0)
             {
-                sumaTotal = numero + sumaTotal;
+                sumaTotal = numero;
 
                 cout << "La suma es: " << sumaTotal << endl;
             }
