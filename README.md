@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main() {
@@ -19,11 +18,11 @@ int main() {
             case 1: {
                 // Películas y precios
                 string peliculas[4] = {"Avengers", "Mario Bros", "Titanic", "Interstellar"};
-                float precios[4] = {5.50, 4.75, 6.00, 5.00};
+                float precios[4] = {5.5, 4.75, 6.0, 5.0};
 
                 cout << "\nPeliculas disponibles:\n";
                 for (int i = 0; i < 4; i++) {
-                    cout << i + 1 << ". " << peliculas[i] << " - $" << fixed << setprecision(2) << precios[i] << endl;
+                    cout << i + 1 << ". " << peliculas[i] << " - $" << precios[i] << endl;
                 }
 
                 int seleccion, cantidad;
@@ -40,7 +39,7 @@ int main() {
                 cout << "\nResumen de compra:\n";
                 cout << "Pelicula: " << peliculas[seleccion - 1] << endl;
                 cout << "Cantidad: " << cantidad << endl;
-                cout << "Total a pagar: $" << fixed << setprecision(2) << total << endl;
+                cout << "Total a pagar: $" << total << endl;
                 break;
             }
             case 2: {
@@ -54,15 +53,15 @@ int main() {
                 break;
             }
             case 3: {
-                float notas[7], suma = 0;
+                float nota, suma = 0;
                 cout << "Ingrese 7 notas:\n";
                 for (int i = 0; i < 7; i++) {
                     cout << "Nota " << i + 1 << ": ";
-                    cin >> notas[i];
-                    suma += notas[i];
+                    cin >> nota;
+                    suma += nota;
                 }
                 float promedio = suma / 7;
-                cout << "Promedio: " << fixed << setprecision(2) << promedio << endl;
+                cout << "Promedio: " << promedio << endl;
                 break;
             }
             case 4:
@@ -76,3 +75,4 @@ int main() {
 
     return 0;
 }
+
